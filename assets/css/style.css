@@ -1,0 +1,501 @@
+
+html, body {
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	color: grey;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+h1, h2, h3 {
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+a {
+	text-decoration: none;
+	color: #9999A5;
+	font-size: 0.9em;
+}
+
+li {
+	list-style: none;
+}
+
+/* ---------------- Nav bar ----------------- */
+/*IDs*/
+
+
+nav {
+	background-color: #FFFFFF;
+	overflow: hidden;
+	border-bottom: 2px solid #DDDDDD;
+}
+
+#nav-container1 {
+	float: left;
+	width: 100%;
+}
+
+#nav-container2 {
+	float: left;
+	width: 100%;
+}
+
+/* targetted */
+
+#big-name {
+	float: left;
+	text-align: center;
+	background-color: #4AAAA5;
+	color: white;
+	padding: 20px;
+}
+
+#nav-links {
+  float: right; 
+  line-height: 45px;
+}
+
+#nav-links li {
+	float: left;
+	padding: 10px 0px;
+}
+
+#nav-links li:after {
+	content: "|"; 
+	color: #DDDDDD;
+	padding: 1em;
+}
+
+#nav-links li:last-child:after {
+  content: none;
+}
+
+/* ---------------- Center stage ----------------- */
+
+main {
+	background-image: url(../images/ignasi_pattern_s.png);
+	background-repeat: repeat;
+	position: relative;
+	min-height: 100%;
+	flex: 1;
+	padding-bottom: 40px;
+}
+
+main h2, h3 {
+	color: #4AAAA5;
+}
+
+#about-me, #contact, #portfolio {
+	width: 650px;
+}
+
+.centering {
+	width: 960px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.centering-nav {
+	width: 960px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.content-box {
+	background-color: white;
+	margin: 40px 0 0 0;
+	border: 1px solid #DDDDDD;
+	display: inline-block;
+	padding: 25px;
+}
+
+#about-me h2, #contact h2, #portfolio h2 {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #DDDDDD;
+}
+
+#about-me-content {
+	padding: 0;
+}
+
+#about-me-content span {
+	line-height: 1.9em;
+	color: grey;
+}
+
+.profile-pic {
+	max-width: 30%;
+	float: left;
+	margin: .5em 20px 0 0;
+}
+
+#connect {
+	width: 270px;
+	float: right;
+}
+
+#connect h3 {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+#social {
+	margin: 0 auto;
+}
+
+.social-icon img {
+	width: 50px;
+	float: left;
+	margin: 10px;
+}
+
+.social-icon img:hover {
+	
+}
+
+/* ---- portfolio specific stuff ---- */
+
+#portfolio-content li {
+	display: block;
+	float: left;
+	width: 47.7%;
+	margin: 0;
+}
+
+#portfolio-content li:nth-child(even) {
+	margin: 13px 0 13px 13px;
+}
+
+#portfolio-content li:nth-child(odd) {
+	margin: 13px 13px 13px 0;
+}
+
+.portfolio-image {
+	position: relative;
+	padding: 0;
+}
+
+.portfolio-image img{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.portfolio-image h3 {
+	color: white;
+	font-weight: normal;
+	text-align: center;
+	margin: 15px;
+}
+
+.overlay-container {
+	position: absolute;
+	bottom: 15px;
+	margin: 0;
+	width: 100%;
+	background-color: #4AAAA5;
+}
+
+
+/* ---------------- footer (fix container to show pattern) ----------------- */
+
+footer {
+	background-color: #666666;
+	text-align: center;
+	color: #DDDDDD;
+	line-height: 6em;
+	border-top: 5px solid #4AAAA5;
+	font-size: .8em;
+	position: absolute;
+  top: 100%;
+	width: 100%;
+}
+
+/* ---------------- Forms ----------------- */
+
+form li {
+	margin: 10px 0 0 0;
+}
+label {
+	line-height: 2em;
+}
+
+textarea, input[type="text"] {
+	display: block;
+	margin: 0;
+	width: 100%;
+	appearance: none;
+	padding: 9px;
+	border: solid 2px #E8E8E8;
+	color: #A9B1C6;
+	font-size: .9em;
+
+}
+
+textarea {
+	height: 200px;
+}
+
+:focus {
+	outline: none;
+}
+
+textarea:focus, input[type="text"]:focus {
+  border-bottom: solid 2px #969696;
+  color: grey;
+}
+
+input[type="submit"] {
+	padding: 10px;
+	width: 120px;
+	color: white;
+	border: none;
+	font-size: bold;
+	background-color: #4AAAA5;
+	margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+	background-color: #00BCD4;
+}
+
+input[type="submit"]:focus {
+	background-color: #607D8B;
+}
+
+
+
+
+/* ======================= MEDIA QUERIES ======================= */
+
+
+
+
+
+/* -------------- 980 width --------------- */
+
+@media only screen and (max-width: 980px) {
+
+	.centering {
+		width: 660px;
+		margin: 0 auto;
+	}
+
+	.centering-nav {
+		width: 660px;
+		margin: 0 auto;
+		height: 100%;
+	}
+
+	#about-me, #contact, #portfolio {
+		width: 400px;
+	}
+
+	.profile-pic {
+		max-width: 100%;
+		float: left;
+		margin-bottom: 15px;
+	}
+
+	#about-me-content span {
+		line-height: 1.9em;
+		color: grey;
+		margin-top: 10px;
+	}
+
+	#connect {
+		width: 220px;
+		float: right;
+	}
+
+	.social-icon img {
+		width: 40px;
+		float: left;
+		margin: 8px;
+	}
+
+	/* - portfolio specific - */
+
+	#portfolio-content li {
+		display: block;
+		float: left;
+		width: 100%;
+		margin: 0;
+	}
+
+	#portfolio-content li:nth-child(even) {
+		margin: 15px 0;
+	}
+
+	#portfolio-content li:nth-child(odd) {
+		margin: 15px 0;
+
+}
+
+/* -------------- 768 width --------------- */
+
+
+@media (max-width: 768px) {
+
+	.centering {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+	.centering-nav {
+		width: 85%;
+		margin: 0 auto;
+		height: 100%;
+	}
+
+	#about-me, #contact, #portfolio {
+		width: 100%;
+	}
+
+	.profile-pic {
+		max-width: 50%;
+		margin-bottom: 10px;
+	}
+
+	#about-me-content span {
+		line-height: 1.9em;
+		color: grey;
+		margin-top: 10px;
+	}
+
+	#connect {
+		width: 100%;
+	}
+
+	.social-icon img {
+		width: 40px;
+		float: left;
+		margin: 8px;
+	}
+
+
+	/* - portfolio specific - */
+
+	#portfolio-content li {
+		display: block;
+		float: left;
+		width: 47%;
+		margin: 0;
+	}
+
+	#portfolio-content li:nth-child(even) {
+		margin: 15px 0 15px 15px;
+	}
+
+	#portfolio-content li:nth-child(odd) {
+		margin: 15px 15px 15px 0;
+
+
+}
+
+/* -------------- 640 width --------------- */
+
+
+@media (max-width: 640px) {
+
+/* ---- Global ---- */
+	a, span  {
+		font-size: .9em;
+	}
+
+/* ----- NAV ------- */
+	.centering-nav {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	#big-name {
+		height: 60px;
+		padding-top: 15px;
+	}
+		
+	#nav-links {
+	  float: none; 
+	  line-height: 35px;
+	  display: table;
+	  margin: 0 auto;
+	  height: 30px;
+	}
+
+	#nav-links li {
+		float: left;
+		padding: 0;
+		font-size: .8em
+	}
+
+	#nav-links li:after {
+		content: "|"; 
+		color: #DDDDDD;
+		padding: 0 3em;
+	}
+
+/* ---- main content ---- */
+
+
+	.centering {
+		width: 85%;
+		margin: 0 auto;
+	}
+
+
+	#big-name {
+		width: 100%;
+	}
+
+	#about-me, #contact, #portfolio {
+		width: 100%;
+	}
+
+	.profile-pic {
+		max-width: 100%;
+		margin-bottom: 15px;
+	}
+
+	#about-me-content span {
+		line-height: 1.9em;
+		color: grey;
+		margin-top: 10px;
+	}
+
+	#connect {
+		width: 100%;
+	}
+
+	.social-icon img {
+		width: 40px;
+		float: left;
+		margin: 8px;
+	}
+
+
+	/* - portfolio specific - */
+
+	#portfolio-content li {
+		display: block;
+		float: left;
+		width: 100%;
+		margin: 0;
+	}
+
+	#portfolio-content li:nth-child(even) {
+		margin: 15px 0;
+	}
+
+	#portfolio-content li:nth-child(odd) {
+		margin: 15px 0;
+
+}
+
+
+}
+} 
